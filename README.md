@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tugas 12 Cloud Computing - PaaS Application
 
-## Getting Started
+Project ini adalah aplikasi web sederhana yang dibangun sebagai bagian dari **Tugas 12: Implementasi Layanan PaaS (Platform as a Service)**. Aplikasi ini mendemonstrasikan penggunaan PaaS dengan mendeploy aplikasi Next.js modern ke cloud (Vercel).
 
-First, run the development server:
+## 🚀 Tentang Aplikasi
+**Task Manager** adalah aplikasi *To-Do List* interaktif yang dibangun dengan desain modern dan responsif.
+- **Tujuan**: Memenuhi tugas kuliah Cloud Computing untuk mencari penyedia PaaS gratis dan membuat aplikasi sederhana di atasnya.
+- **Penyedia PaaS**: [Vercel](https://vercel.com/) (Dipilih karena integrasi native dengan Next.js dan tier gratis yang generous).
+
+## ✨ Fitur
+- **Manajemen Tugas**: Menambah, menandai selesai, dan menghapus tugas.
+- **Modern UI/UX**: Desain antarmuka premium dengan *Glassmorphism*, gradasi warna, dan animasi halus.
+- **Resposif**: Tampilan tetap optimal di perangkat mobile maupun desktop.
+- **State Management**: Menggunakan React Hooks (`useState`) untuk interaksi real-time di sisi klien.
+
+## 🛠️ Teknologi yang Digunakan
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: SVG (Lucide React style)
+- **Font**: Geist Sans & Mono (Next.js default font optimization)
+
+## 📂 Struktur Project
+Berikut adalah struktur folder utama dalam project ini:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+paasawan/
+├── public/              # Aset statis
+│   ├── grid.svg         # Background pattern
+│   └── ...
+├── src/
+│   └── app/             # App Router directory
+│       ├── globals.css  # Global styles & Tailwind directives
+│       ├── layout.tsx   # Root layout (Metadata & Font config)
+│       └── page.tsx     # Halaman utama (Aplikasi Task Manager)
+├── package.json         # Dependencies & scripts
+├── next.config.ts       # Konfigurasi Next.js
+├── tailwind.config.ts   # Konfigurasi Tailwind (jika ada custom config)
+└── README.md            # Dokumentasi project
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 💻 Cara Menjalankan Project (Local)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1.  **Clone atau Masuk ke Direktori Project**
+    ```bash
+    cd paasawan
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
 
-## Learn More
+3.  **Jalankan Development Server**
+    ```bash
+    npm run dev
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+4.  **Buka di Browser**
+    Akses [http://localhost:3000](http://localhost:3000) untuk melihat aplikasi.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌐 Deployment (Vercel)
+Project ini siap di-deploy ke Vercel dengan langkah mudah:
+1. Push kode ke Repository GitHub/GitLab/Bitbucket.
+2. Login ke [Vercel](https://vercel.com) dan buat "New Project".
+3. Import repository tersebut.
+4. Klik **Deploy**. Vercel akan otomatis mendeteksi konfigurasi Next.js.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+**Catatan**: Project ini dibuat untuk tujuan edukasi dan demonstrasi tugas kuliah.
